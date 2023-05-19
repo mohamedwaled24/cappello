@@ -1,6 +1,7 @@
 import React from 'react'
 import banner from '../assets/banner.jpg'
 import Button from '../components/elements/Button'
+import {Link} from 'react-router-dom'
 
 
 const Banner = () => {
@@ -12,7 +13,7 @@ const Banner = () => {
           Get Started Today !
         </p>
         <div className='btn-container'>
-          <Button>Order</Button>
+          <Button><Link to='/menu'>Order</Link></Button>
           <a href='/menu' className='text-yellow-400 hover:text-yellow-500 text-decoration-line px-3 ' />
         </div>
 
