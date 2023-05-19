@@ -8,7 +8,8 @@ const productRoute=require('./routes/productRoute')
 const userRoute=require('./routes/userRoute')
 const dotenv =require('dotenv').config({path:'../.env'})
 const stripe =require('stripe')(process.env.STRIPE_SECRET_KEY)
-const endpointSecret = 'whsec_666e9e4fab94224324e4b47016b390acca16c5352cf9c05600d9b239d9782a26'
+const endpointSecret = process.env.END_POINT_SECRET
+
 
 
 const Order =require('./models/Order')
@@ -123,7 +124,7 @@ app.get('/',(req,res)=>{
 })
 
 
-mongoose.connect('mongodb+srv://wello:Wello.123@cluster0.8zccmpy.mongodb.net/cappello')
+mongoose.connect(process.env.DB_URL)
 .then((res)=>{console.log('db connected')})
 .catch((err)=>console.log(err))
 

@@ -8,8 +8,7 @@ async function main() {
   try {
     // connect db
     const db =await mongoose.connect(
-        process.env.DB_URL ||
-          "mongodb+srv://wello:Wello.123@cluster0.8zccmpy.mongodb.net/cappello",
+        process.env.DB_URL,
         { useNewUrlParser: true }
       )
       if(db){
