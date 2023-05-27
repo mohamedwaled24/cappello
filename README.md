@@ -25,5 +25,5 @@ To install and run the API locally, follow these steps:
 
 3. Start the server using `npm start`
 
-4. Access the website at `http://localhost:3001`
+4. Access the website at `http://localhost:3000`
 
